@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="Interaktív tanulóapp az emelt szintű matematika érettségihez.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MATEK OS">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<title>MATEK OS</title>
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<aside id="side" aria-label="Főmenü">
+  <div class="brand">MATEK OS</div>
+  <a href="#kezdolap" data-nav="kezdolap">Kezdőlap</a>
+  <a href="#tananyag" data-nav="tananyag">Tananyag</a>
+  <a href="#kepletter" data-nav="kepletter">Képlettár</a>
+  <a href="#labor" data-nav="labor">Labor</a>
+  <a href="#gyakorlas" data-nav="gyakorlas">Gyakorlás</a>
+  <a href="#vizsga" data-nav="vizsga">Vizsga</a>
+  <a href="#hibanaplo" data-nav="hibanaplo">Hibanapló</a>
+  <a href="#adatok" data-nav="adatok">Adatok</a>
+  <button class="nav" type="button" data-act="search">Keresés <span class="kbd">Ctrl K</span></button>
+</aside>
+<main id="main" tabindex="-1"></main>
+<nav id="tabs" aria-label="Fő lapok">
+  <a href="#kezdolap" data-nav="kezdolap">Kezdő</a>
+  <a href="#tananyag" data-nav="tananyag">Tananyag</a>
+  <a href="#gyakorlas" data-nav="gyakorlas">Gyakorlás</a>
+  <a href="#labor" data-nav="labor">Labor</a>
+  <button type="button" data-act="search">Keresés</button>
+  <button type="button" data-act="more">Több</button>
+</nav>
+<div id="search" hidden role="dialog" aria-label="Keresés">
+  <div class="box">
+    <input type="search" id="q" placeholder="Keresés: téma, képlet, fogalom, eszköz" autocomplete="off" aria-label="Keresés">
+    <div class="res" id="res"></div>
+  </div>
+</div>
+<div id="more" hidden role="dialog" aria-label="További menüpontok">
+  <div class="box">
+    <a href="#kepletter">Képlettár</a>
+    <a href="#kartyak">Képletkártyák</a>
+    <a href="#vizsga">Vizsga</a>
+    <a href="#hibanaplo">Hibanapló</a>
+    <a href="#adatok">Adatok</a>
+  </div>
+</div>
+<script src="vendor/katex/katex.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/cas.js"></script>
+<script src="js/plot.js"></script>
+<script src="js/plot3d.js"></script>
+<script src="js/models.js"></script>
+<script src="js/topics.js"></script>
+<script src="js/taskkit.js"></script>
+<script src="js/tasks-alapok.js"></script>
+<script src="js/data-alapok.js"></script>
+<script src="js/content-gondolkodas.js"></script>
+<script src="js/content-algebra1.js"></script>
+<script src="js/content-algebra2.js"></script>
+<script src="js/content-algebra3.js"></script>
+<script src="js/content-fuggvenyek1.js"></script>
+<script src="js/content-fuggvenyek2.js"></script>
+<script src="js/content-geometria1.js"></script>
+<script src="js/content-geometria2.js"></script>
+<script src="js/content-valoszinuseg.js"></script>
+<script src="js/formulas-gondolkodas.js"></script>
+<script src="js/formulas-algebra.js"></script>
+<script src="js/formulas-fuggvenyek.js"></script>
+<script src="js/formulas-geometria.js"></script>
+<script src="js/formulas-valoszinuseg.js"></script>
+<script src="js/sims-fv1.js"></script>
+<script src="js/sims-fv2.js"></script>
+<script src="js/sims-analizis1.js"></script>
+<script src="js/sims-analizis2.js"></script>
+<script src="js/sims-sikgeo.js"></script>
+<script src="js/sims-tergeo.js"></script>
+<script src="js/sims-valszam.js"></script>
+<script src="js/sims-statgraf.js"></script>
+<script src="js/sims-szamelmelet.js"></script>
+<script src="js/bank-gondolkodas.js"></script>
+<script src="js/bank-algebra.js"></script>
+<script src="js/bank-fuggvenyek.js"></script>
+<script src="js/bank-geometria.js"></script>
+<script src="js/bank-valoszinuseg.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/practice.js"></script>
+<script src="js/exams-index.js"></script>
+<script src="js/offline.js"></script>
+<script src="js/exam.js"></script>
+</body>
+</html>

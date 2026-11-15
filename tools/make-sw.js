@@ -4,7 +4,7 @@ const fs = require('fs'), path = require('path'), crypto = require('crypto');
 const APP = path.resolve(process.argv[2] || path.join(__dirname, '../../matek-os'));
 const files = [];
 (function walk(d) { fs.readdirSync(d).sort().forEach(f => { const p = path.join(d, f), r = path.relative(APP, p).split(path.sep).join('/');
-  if (fs.statSync(p).isDirectory()) { if (r !== 'vizsgak') walk(p); } else if (r !== 'sw.js') files.push(r); }); })(APP);
+  if (fs.statSync(p).isDirectory()) { if (r !== 'vizsgak' && r !== 'tools' && f[0] !== '.') walk(p); } else if (r !== 'sw.js' && r !== 'README.md' && f[0] !== '.') files.push(r); }); })(APP);
 const h = crypto.createHash('sha1'); files.forEach(f => { h.update(f); h.update(fs.readFileSync(path.join(APP, f))); });
 const ver = h.digest('hex').slice(0, 10);
 const sw = `/* MATEK OS – service worker (előállítva: build/tools/make-sw.js). Ne szerkeszd kézzel. */
